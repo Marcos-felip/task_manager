@@ -49,4 +49,3 @@ import CommonGridShape from '../../components/common/CommonGridShape.vue'
 import FullScreenLayout from '../../components/layout/FullScreenLayout.vue'
 import SignInForm from '@/components/auth/SignInForm.vue'
 </script>
-

@@ -7,22 +7,14 @@
             <div>
               <div class="mb-5 sm:mb-8">
                 <h1 class="mb-2 font-semibold text-gray-800 text-title-sm dark:text-white/90 sm:text-title-md">
-                  Esqueceu sua senha?
+                  Criar Organização
                 </h1>
                 <p class="text-sm text-gray-500 dark:text-gray-400">
-                  Digite o endereço de email vinculado à sua conta e enviaremos um link para
-                  redefinir sua senha.
+                  Preencha os dados abaixo para criar uma nova organização.
                 </p>
               </div>
               <div>
-                <ResetPasswordForm />
-                <div class="mt-5">
-                  <p class="text-sm font-normal text-center text-gray-700 dark:text-gray-400 sm:text-start">
-                    Espere, lembrei minha senha...
-                    <router-link to="/signin" class="text-brand-500 hover:text-brand-600 dark:text-brand-400">Clique
-                      aqui</router-link>
-                  </p>
-                </div>
+                <OrganizationCreateForm />
               </div>
             </div>
           </div>
@@ -35,7 +27,7 @@
                 <img width="{231}" height="{48}" src="/images/logo/auth-logo.svg" alt="Logo" />
               </router-link>
               <p class="text-center text-gray-400 dark:text-white/60">
-                Modelo de Dashboard Admin Gratuito e Open-Source com Tailwind CSS
+                Modelo de painel de administração Tailwind CSS gratuito e de código aberto
               </p>
             </div>
           </div>
@@ -46,9 +38,7 @@
 </template>
 
 <script setup lang="ts">
-import FullScreenLayout from '../../components/layout/FullScreenLayout.vue'
 import CommonGridShape from '../../components/common/CommonGridShape.vue'
-import ResetPasswordForm from '../../components/auth/ResetPasswordForm.vue'
+import FullScreenLayout from '../../components/layout/FullScreenLayout.vue'
+import OrganizationCreateForm from '@/components/auth/OrganizationCreateForm.vue'
 </script>
-
-<style scoped></style>
