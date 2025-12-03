@@ -65,6 +65,7 @@ const handleSubmit = async () => {
 
     localStorage.setItem('access_token', response.access)
     localStorage.setItem('refresh_token', response.refresh)
+    localStorage.setItem('user', JSON.stringify(response.user))
 
     router.push({
       name: 'Home',
