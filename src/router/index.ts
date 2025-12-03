@@ -6,6 +6,7 @@ const SignUp = () => import('../pages/auth/Signup.vue')
 const OrganizationCreate = () => import('../pages/auth/OrganizationCreate.vue')
 const ResetPassword = () => import('../pages/auth/ResetPassword.vue')
 const Home = () => import('../pages/home/Home.vue')
+const ListAccounts = () => import('../pages/accounts/List.vue')
 
 const routes = [
   {
@@ -36,6 +37,12 @@ const routes = [
     path: '/home',
     name: 'Home',
     component: Home,
+    meta: { requiresAuth: true },
+  },
+  {
+    path: '/accounts/list',
+    name: 'ListAccounts',
+    component: ListAccounts,
     meta: { requiresAuth: true },
   },
 ]

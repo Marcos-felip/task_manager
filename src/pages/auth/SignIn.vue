@@ -45,7 +45,7 @@
 </template>
 
 <script setup lang="ts">
-import CommonGridShape from '../../components/common/CommonGridShape.vue'
+import CommonGridShape from '../../components/common/GridShape'
 import FullScreenLayout from '../../components/layout/FullScreenLayout.vue'
 import SignInForm from '@/components/auth/SignInForm.vue'
 </script>

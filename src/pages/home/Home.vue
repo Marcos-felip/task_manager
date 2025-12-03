@@ -1,19 +1,13 @@
 <template>
-    <div class="min-h-screen xl:flex">
-        <app-sidebar />
-        <div class="flex-1 transition-all duration-300 ease-in-out"
-            :class="[isExpanded || isHovered ? 'lg:ml-[290px]' : 'lg:ml-[90px]']">
-            <app-header />
-            <div class="p-4 mx-auto max-w-(--breakpoint-2xl) md:p-6">
-                <slot></slot>
-            </div>
-        </div>
-    </div>
+    <AdminLayout>
+        <Breadcrumb :pageTitle="currentPageTitle" />
+        <div class="space-y-5 sm:space-y-6"></div>
+    </AdminLayout>
 </template>
 
 <script setup lang="ts">
-import AppSidebar from '../../components/layout/AppSidebar.vue'
-import AppHeader from '../../components/layout/AppHeader.vue'
-import { useSidebar } from '../../utils/useSidebar'
-const { isExpanded, isHovered } = useSidebar()
+import { ref } from "vue";
+import Breadcrumb from "../../components/common/Breadcrumb.vue";
+import AdminLayout from "../../components/layout/AdminLayout.vue";
+const currentPageTitle = ref("Painel");
 </script>
