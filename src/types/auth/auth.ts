@@ -4,15 +4,15 @@ export interface Auth {
 }
 
 export interface AuthResponse {
-  access_token: string
-  refresh_token: string
+  access: string
+  refresh: string
 }
 
 export interface RefreshToken {
-  refresh_token: string
+  refresh: string
 }
 
 export interface RefreshTokenResponse {
-  access_token: string
-  refresh_token: string
+  access: string
+  refresh: string
 }

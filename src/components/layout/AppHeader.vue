@@ -16,9 +16,6 @@
       </div>
 
       <div class="flex items-center justify-end w-full gap-4 px-5 py-4">
-        <div class="flex items-center gap-2 2xsm:gap-3">
-          <ThemeToggler />
-        </div>
         <UserMenu />
       </div>
     </div>
@@ -27,7 +24,6 @@
 
 <script setup lang="ts">
 import { useSidebar } from '../../utils/useSidebar'
-import ThemeToggler from '../common/ThemeToggler.vue'
 import HeaderLogo from './header/HeaderLogo.vue'
 import UserMenu from './header/UserMenu.vue'
 
