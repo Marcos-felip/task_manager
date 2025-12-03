@@ -9,6 +9,6 @@ export const getUsers = async (): Promise<UserResponse[]> => {
 }
 
 export const createUser = async (data: User): Promise<UserResponse> => {
-  const response = await axios.post(`${API_BASE_URL}/accounts/members/`, data)
+  const response = await axios.post(`${API_BASE_URL}accounts/members/`, data)
   return response.data
 }

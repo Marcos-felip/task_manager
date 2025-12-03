@@ -2,7 +2,7 @@
   <AdminLayout>
     <Breadcrumb :pageTitle="currentPageTitle" />
     <div class="space-y-5 sm:space-y-6">
-      <Card title="Usuários do Sistema" buttonText="Novo Usuário">
+      <Card title="Usuários do Sistema" buttonText="Novo Usuário" buttonRoute="/accounts/create">
         <UserTable />
         <Pagination :currentPage="currentPage" :totalPages="totalPages" @page-change="handlePageChange" />
       </Card>

@@ -9,7 +9,15 @@
         <h3 class="text-base font-medium text-gray-800 dark:text-white/90">
           {{ title }}
         </h3>
-        <Button v-if="buttonText" variant="primary" size="sm">
+        <p v-if="desc" class="mt-1 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+          {{ desc }}
+        </p>
+        <router-link v-if="buttonText && buttonRoute" :to="buttonRoute" class="inline-block">
+          <Button variant="primary" size="sm">
+            {{ buttonText }}
+          </Button>
+        </router-link>
+        <Button v-else-if="buttonText && buttonAction" variant="primary" size="sm" :onClick="buttonAction">
           {{ buttonText }}
         </Button>
       </div>
@@ -31,7 +39,10 @@ import Button from '../ui/Button.vue'
 interface Props {
   title: string
   buttonText?: string
+  buttonRoute?: string
+  buttonAction?: () => void
   className?: string
+  desc?: string
 }
 
 defineProps<Props>()

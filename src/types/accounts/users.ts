@@ -3,7 +3,6 @@ export interface User {
   email: string
   role: string
   password: string
-  password_confirm: string
   organization_key: string
 }
 
