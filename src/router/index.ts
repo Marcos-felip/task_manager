@@ -6,7 +6,7 @@ const SignUp = () => import('../pages/auth/Signup.vue')
 const OrganizationCreate = () => import('../pages/auth/OrganizationCreate.vue')
 const ResetPassword = () => import('../pages/auth/ResetPassword.vue')
 const Home = () => import('../pages/home/Home.vue')
-const ListAccounts = () => import('../pages/accounts/List.vue')
+const ListAccounts = () => import('../pages/accounts/ListUser.vue')
 
 const routes = [
   {

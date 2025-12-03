@@ -10,6 +10,10 @@ export interface AuthResponse {
     first_name: string
     last_name: string
     email: string
+    org_active: {
+      name: string
+      organization_key: string
+    }
   }
 }
 

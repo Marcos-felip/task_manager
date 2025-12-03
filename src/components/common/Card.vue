@@ -5,12 +5,14 @@
   ]">
     <!-- Card Header -->
     <div class="px-6 py-5">
-      <h3 class="text-base font-medium text-gray-800 dark:text-white/90">
-        {{ title }}
-      </h3>
-      <p v-if="desc" class="mt-1 text-sm text-gray-500 dark:text-gray-400">
-        {{ desc }}
-      </p>
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+        <h3 class="text-base font-medium text-gray-800 dark:text-white/90">
+          {{ title }}
+        </h3>
+        <Button v-if="buttonText" variant="primary" size="sm">
+          {{ buttonText }}
+        </Button>
+      </div>
     </div>
 
     <!-- Card Body -->
@@ -24,11 +26,12 @@
 
 <script setup lang="ts">
 import { defineProps } from 'vue'
+import Button from '../ui/Button.vue'
 
 interface Props {
   title: string
+  buttonText?: string
   className?: string
-  desc?: string
 }
 
 defineProps<Props>()

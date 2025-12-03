@@ -47,7 +47,6 @@
 
 <script setup lang="ts">
 import FullScreenLayout from '../../components/layout/FullScreenLayout.vue'
-import CommonGridShape from '../../components/common/GridShape'
 import ResetPasswordForm from '../../components/auth/ResetPasswordForm.vue'
 </script>
 

@@ -2,8 +2,8 @@
   <AdminLayout>
     <Breadcrumb :pageTitle="currentPageTitle" />
     <div class="space-y-5 sm:space-y-6">
-      <Card title="Usuários do Sistema">
-        <Table />
+      <Card title="Usuários do Sistema" buttonText="Novo Usuário">
+        <UserTable />
         <Pagination :currentPage="currentPage" :totalPages="totalPages" @page-change="handlePageChange" />
       </Card>
     </div>
@@ -15,7 +15,7 @@ import { ref } from "vue";
 import Breadcrumb from "../../components/common/Breadcrumb.vue";
 import AdminLayout from "../../components/layout/AdminLayout.vue";
 import Card from "../../components/common/Card.vue";
-import Table from "../../components/common/Table.vue";
+import UserTable from "../../components/accounts/UserTable.vue";
 import Pagination from "../../components/common/Pagination.vue";
 
 const currentPageTitle = ref("Usuários do Sistema");
